@@ -1,0 +1,56 @@
+Command
+dpkg -l atau --list = Melihat apk terinstall.
+
+cat /var/log/apt/history.log atau cat /var/log/dpkg.log = melihat log aplikasi yang terinstall.
+
+sudo apt-get remove package1 package2 package3 = menghapus beberapa package sekaligus.
+
+sudo apt-get --purge remove namaPackage = menghapus package beserta file konfigurasinya.
+
+sudo apt-get remove namaPackage = menghapus package tanpa harus menghapus file konfigurasi.
+
+sudo apt-get purge --auto-remove namaPackge = menghapus secara total package serta file yang berhubungan dengan package tersebut.
+
+sudo apt-get clean = Perintah “clean” juga bisa kamu gunakan untuk membersihkan file yang ada di “/var/cache/apt/archives”. Karena setiap kamu menginstal suatu program atau aplikasi, maka berkas aplikasi tersebut akan tersimpan di direktori tadi dan tentunya akan menumpuk di hardisk jika tetap dibiarkan, apalagi jika berkas tadi berisi aplikasi yang sudah tidak dibutuhkan oleh kamu.
+
+dpkg --get-selections = melihat semua package yang terinstall dengan rapi.
+
+grep -i -r "sudo" home/rintoharahap/Desktop = Secara default perintah grep membaca kata_kunci pencarian yang kamu masukan secara case sensitif agar tidak case sensitif tambahkan opsi -i menjadi grep -i dan agar grep membaca directory secara recursive (membaca sub dir) tambahkan opsi -r menjadi grep -i -r.
+
+grep -i -w "kata_kunci" namafile atau grep -i "kata_kunci" namafile  = Jika kamu hanya ingin menampilkan kolom yang hanya mengandung kata_kunci maka gunakan opsi/parameter -w.
+
+egrep -w 'kata_kunci1|kata_kunci2' namafile = mencari lebih dari satu kata kunci.
+
+namaPerintah --help/-h/-help atau man namaPerintah = melihat cara kerja perintah tersebut.
+
+head namafile = melihat isi dalam file, secara default 10 baris pertama.
+
+head -n 3 namafile = melihat isi dalam file 3 baris pertama.
+
+tail namafile = melihat isi dalam file, secara default 10 baris terakhir.
+
+tail -n 4 namafile = melihat isi dalam file 4 baris terakhir.
+
+cat namafile = membaca semua isi dalam file.
+
+mkdir namaFolder1 namaFolder2 namaFolder3 = membuat beberapa folder sekaligus.
+
+rm namaFolder1 namaFolder2 namaFolder3 = menghapus beberapa folder sekaligus.
+
+mkdir "nama folder" = membuat folder mengandung spasi.
+
+cp namafile = copy file.
+
+ls bin atau ls sbin atau ls /usr/bin = melihat semua perintah-perintah linux dengan syarat harus menggunakan dengan super user dan masuk ke folder root.
+
+sudo su = masuk dengan super user.
+
+mv namafile /namafolder = memindahkan file.
+
+mv namaFileYangAkanDiUbah perubahanNamaFile = perintah "mv" juga dapat mengubah nama file, catatan : jika nama file filenya mengandung spasi gunakan \ dan spasi. karena linux menggunakan case sensitif. 
+
+sudo dpkg -i namaPackage = cara untuk menginstall aplikasi atau paket, syaratnya harus masuk sebagai super user.
+
+sudo apt-get install -f = biasanya setelah penginstalan aplikasi ada error gunakan perintah ini.
+
+df -h atau du -sh /* = cek penggunaan hardisk.

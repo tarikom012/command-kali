@@ -47,10 +47,13 @@ sudo su = masuk dengan super user.
 
 mv namafile /namafolder = memindahkan file.
 
-mv namaFileYangAkanDiUbah perubahanNamaFile = perintah "mv" juga dapat mengubah nama file, catatan : jika nama file filenya mengandung spasi gunakan \ dan spasi. karena linux menggunakan case sensitif. 
+dpkg -i namaSoftware = untuk menginstall aplikasi,dengan syarat harus posisi terminal harus ada pada direktori tempat file yang di download misal : /home/rintoharahap/download
 
-sudo dpkg -i namaPackage = cara untuk menginstall aplikasi atau paket, syaratnya harus masuk sebagai super user.
 
-sudo apt-get install -f = biasanya setelah penginstalan aplikasi ada error gunakan perintah ini.
+df -h = cek pemakaian hardisk/ssd
 
-df -h atau du -sh /* = cek penggunaan hardisk.
+
+shutdown now = langsung shutdown
+
+
+shutdown -r now = langsung restart
